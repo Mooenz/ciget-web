@@ -7,9 +7,10 @@ import tailwindcss from '@tailwindcss/vite';
 
 // https://astro.build/config
 export default defineConfig({
-  integrations: [react()],
-
-  vite: {
-    plugins: [tailwindcss()]
-  }
+	integrations: [react()],
+	site: 'https://Mooenz.github.io',
+	base: '/ciget-web/',
+	vite: {
+		plugins: [tailwindcss()],
+	},
 });
