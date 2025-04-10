@@ -11,12 +11,9 @@ jobs:
     steps:
       - name: Obtener el código fuente
         uses: actions/checkout@v3
-        with:
-          submodules: true
-          fetch-depth: 0
 
       - name: Configurar Node.js
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4
         with:
           node-version: 22
 
@@ -27,6 +24,6 @@ jobs:
         run: npm run build
 
       - name: Desplegar en GitHub Pages
-        uses: withastro/action@v1
+        uses: withastro/action@v2
         with:
-          path: '.'
+          path: .

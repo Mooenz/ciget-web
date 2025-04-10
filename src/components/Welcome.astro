@@ -1,13 +1,22 @@
 ---
-
+const base = import.meta.env.BASE_URL;
+const videoSrc = `${base}video.mp4`;
 ---
+
+<script>
+	// Hacemos el video mas lento
+	const video = document.querySelector('.isla_video') as HTMLVideoElement;
+	if (video) {
+		video.playbackRate = 0.5;
+	}
+</script>
 
 <div class="background-animado"></div>
 
 <section class="isla">
 	<!-- Video -->
 	<video class="isla_video" autoplay muted loop playsinline class="video">
-		<source src="./video.mp4" type="video/mp4" />
+		<source src={videoSrc} type="video/mp4" />
 		Your browser does not support the video tag.
 	</video>
 
@@ -22,14 +31,6 @@
 		</a>
 	</div>
 </section>
-
-<script>
-	// Hacemos el video mas lento
-	const video = document.querySelector('.isla_video') as HTMLVideoElement;
-	if (video) {
-		video.playbackRate = 0.5;
-	}
-</script>
 
 <style>
 	:root {
