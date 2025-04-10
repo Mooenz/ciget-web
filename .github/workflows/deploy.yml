@@ -27,6 +27,9 @@ jobs:
       - name: Construir el proyecto
         run: npm run build
 
+      - name: Desactivar Jekyll
+        run: echo "" > ./dist/.nojekyll
+
       - name: Subir artefacto para GitHub Pages
         uses: actions/upload-pages-artifact@v3
         with:
