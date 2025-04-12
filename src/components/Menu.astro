@@ -1,0 +1,55 @@
+---
+const logo = 'logo-ciget.png';
+---
+
+<header class="menu">
+	<nav class="menu__nav">
+		<p class="menu__item">Inicio</p>
+		<p class="menu__item">Nosotros</p>
+		<div class="menu__nav--logo">
+			<img src={logo} width="900" height="900" alt="Logo CIGET" title="Imagen logo CIGET" />
+		</div>
+		<p class="menu__item">Servicios</p>
+		<p class="menu__item">Contacto</p>
+	</nav>
+</header>
+
+<style>
+	.menu {
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100px;
+		z-index: 100;
+		padding-top: 24px;
+	}
+
+	.menu__nav {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		gap: 32px;
+		width: 100%;
+		max-width: 1200px;
+		margin: 0 auto;
+	}
+
+	.menu__item {
+		padding: 0 16px;
+		font-size: 18px;
+		font-weight: 500;
+	}
+
+	.menu__nav--logo {
+		flex: 1;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	.menu__nav--logo img {
+		max-width: 120px;
+		height: auto;
+	}
+</style>
